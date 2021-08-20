@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "URL Params Parser",
+	"version": "1.0.0",
+	"description": "URLのクエリパラメーターの一覧を別ウィンドウに表示します。",
+	"icons": {
+		"16": "./icons/icon16.png",
+		"32": "./icons/icon32.png",
+		"48": "./icons/icon48.png",
+		"128": "./icons/icon128.png"
+	},
+	"author": "YabPaseri",
+	"permissions": [
+		"contextMenus",
+		"tabs",
+		"storage"
+	],
+	"background": {
+		"scripts": [
+			"background.js"
+		],
+		"persistent": false
+	},
+	"options_page": "./html/options.html"
+}

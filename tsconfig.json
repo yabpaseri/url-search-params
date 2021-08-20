@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"target": "ES6",
+		"module": "CommonJS",
+		"lib": [
+			"DOM",
+			"ESNext",
+			"DOM.Iterable",
+		],
+		"jsx": "react",
+		"strict": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"strictNullChecks": true,
+		"sourceMap": true,
+		"outDir": "./dist",
+		"sourceRoot": "./src",
+	}
+}

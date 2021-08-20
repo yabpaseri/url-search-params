@@ -1,0 +1,35 @@
+{
+	"[typescriptreact]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true,
+		},
+		"editor.formatOnSave": true,
+	},
+	"[typescript]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true,
+		},
+		"editor.formatOnSave": true,
+	},
+	"[json]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false,
+		"editor.formatOnSave": true,
+	},
+	"[jsonc]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false,
+		"editor.formatOnSave": true,
+	},
+	"[html]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false,
+		"editor.formatOnSave": true,
+	},
+	"html.format.indentInnerHtml": true,
+	"html.format.extraLiners": "",
+}

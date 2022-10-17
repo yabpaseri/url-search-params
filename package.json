@@ -3,12 +3,12 @@
   "description": "Extension for retrieving and editing URL query strings, like JavaScript's URLSearchParams.",
   "private": true,
   "license": "GPL-3.0",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-	"ver": "npm --no-git-tag-version version"
+    "ver": "npm --no-git-tag-version version"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",

@@ -16,14 +16,17 @@ type TProps = {
 
 export const ParamValuesEditor = memo<TProps>(({ param: { name, values } }) => {
 	const dispatch = usePopupDispatch();
+	const handleDoubleClick = useCallback(() => {
+		dispatch({ type: 'REMOVE_PARAM', name });
+	}, [dispatch, name]);
 	const handleAddClick = useCallback(() => {
 		dispatch({ type: 'ADD_PARAM_VALUE', name, value: '' });
 	}, [dispatch, name]);
 
 	return (
 		<Stack spacing="5px">
-			<S.Stack direction="row">
-				<S.Typography variant="h6" flexGrow={1}>
+			<S.Stack spacing="5px" direction="row">
+				<S.Typography variant="h6" flexGrow={1} onDoubleClick={handleDoubleClick}>
 					{name}
 				</S.Typography>
 				<ArrowTooltip title="Add new value">
@@ -49,6 +52,6 @@ const S = {
 		paddingLeft: '10px',
 	}),
 	IconButton: styled(IconButton)({
-		padding: '4px',
+		padding: '4px 4.5px',
 	}),
 };

@@ -79,7 +79,7 @@ const popupReducer = (state: PopupState, action: Action): PopupState => {
 			return { ...state, params };
 		}
 		case 'REMOVE_PARAM': {
-			const params = state.params.filter((v) => v.name === action.name);
+			const params = state.params.filter((v) => v.name !== action.name);
 			if (state.params.length === params.length) {
 				return state;
 			}

@@ -1,0 +1,38 @@
+{
+	"ADD_NEW_KEY": {
+		"message": "キーの追加"
+	},
+	"ADD_NEW_VALUE": {
+		"message": "値の追加"
+	},
+	"ALREADY_EXIST": {
+		"message": "既に存在しています"
+	},
+	"COPIED": {
+		"message": "コピーしました"
+	},
+	"COPY": {
+		"message": "コピー"
+	},
+	"COPY_DECODED": {
+		"message": "コピー (デコードされた値)"
+	},
+	"DELETE": {
+		"message": "削除"
+	},
+	"EDIT_DECODED_VALUES": {
+		"message": "デコードされた値を編集"
+	},
+	"EDIT_ENCODED_VALUES": {
+		"message": "エンコードされた値を編集"
+	},
+	"ENTER_EDIT_MODE": {
+		"message": "編集モードを開始"
+	},
+	"EXIT_EDIT_MODE": {
+		"message": "編集モードを終了"
+	},
+	"OPEN": {
+		"message": "開く"
+	}
+}

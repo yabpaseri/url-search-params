@@ -5,6 +5,7 @@ import { styled } from '@mui/material/styles';
 import ToggleButton from '@mui/material/ToggleButton';
 import { memo, useCallback, useMemo, useState } from 'react';
 import { usePopupDispatch } from '../../../context/popup-context';
+import i18n from '../../../i18n';
 import { SearchParamValue } from '../../../type';
 import { MemoizedInput, OutlinedIconButton } from '../../components';
 import { ArrowTooltip } from '../../components/arrow-tooltip';
@@ -48,12 +49,12 @@ export const ParamValueEditor = memo<TProps>(({ name, id, value }) => {
 				onChange={decodeMode ? handleDecodedChange : handleValueChange}
 				size="small"
 			/>
-			<ArrowTooltip title={decodeMode ? 'Edit encoded values' : 'Edit decoded values'}>
+			<ArrowTooltip title={decodeMode ? i18n('EDIT_ENCODED_VALUES') : i18n('EDIT_DECODED_VALUES')}>
 				<S.ToggleButton value={decodeMode} selected={decodeMode} onChange={handleModeChange}>
 					<CodeIcon />
 				</S.ToggleButton>
 			</ArrowTooltip>
-			<ArrowTooltip title="Delete">
+			<ArrowTooltip title={i18n('DELETE')}>
 				<S.OutlinedIconButton onClick={handleDeleteClick} icon={<DeleteIcon />} />
 			</ArrowTooltip>
 		</Stack>

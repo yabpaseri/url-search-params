@@ -3,6 +3,7 @@ import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstruct
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 import { memo, useCallback, useMemo, useState } from 'react';
+import i18n from '../../../i18n';
 import { CopyToClipboard, MemoizedInput, OutlinedIconButton } from '../../components';
 
 type TProps = {
@@ -19,10 +20,10 @@ export const ParamValueReader = memo<TProps>(({ value }) => {
 	return (
 		<Stack direction="row" spacing="5px">
 			<S.MemoizedInput value={hover ? decoded : value} size="small" fullWidth />
-			<CopyToClipboard defaultTitle="Copy" text={value}>
+			<CopyToClipboard defaultTitle={i18n('COPY')} text={value}>
 				<S.OutlinedIconButton icon={<AssignmentIcon />} size="small" />
 			</CopyToClipboard>
-			<CopyToClipboard defaultTitle="Copy (decoded)" text={decoded}>
+			<CopyToClipboard defaultTitle={i18n('COPY_DECODED')} text={decoded}>
 				<S.OutlinedIconButton
 					icon={<IntegrationInstructionsIcon />}
 					size="small"

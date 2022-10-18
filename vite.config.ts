@@ -11,6 +11,7 @@ const manifest = defineManifest({
 	version,
 	version_name,
 	description,
+	default_locale: 'en',
 	icons: {
 		'16': 'icons/icon16.png',
 		'32': 'icons/icon32.png',

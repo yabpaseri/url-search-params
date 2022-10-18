@@ -6,6 +6,7 @@ import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import { memo, useCallback } from 'react';
 import { usePopupDispatch } from '../../../context/popup-context';
+import i18n from '../../../i18n';
 import { SearchParam } from '../../../type';
 import { ArrowTooltip } from '../../components/arrow-tooltip';
 import { ParamValueEditor } from './param-value-editor';
@@ -29,7 +30,7 @@ export const ParamValuesEditor = memo<TProps>(({ param: { name, values } }) => {
 				<S.Typography variant="h6" flexGrow={1} onDoubleClick={handleDoubleClick}>
 					{name}
 				</S.Typography>
-				<ArrowTooltip title="Add new value">
+				<ArrowTooltip title={i18n('ADD_NEW_VALUE')}>
 					<S.IconButton onClick={handleAddClick} size="small" color="inherit">
 						<AddIcon />
 					</S.IconButton>

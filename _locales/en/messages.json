@@ -1,0 +1,38 @@
+{
+	"ADD_NEW_KEY": {
+		"message": "Add new key"
+	},
+	"ADD_NEW_VALUE": {
+		"message": "Add new value"
+	},
+	"ALREADY_EXIST": {
+		"message": "Already exist"
+	},
+	"COPIED": {
+		"message": "Copied!"
+	},
+	"COPY": {
+		"message": "Copy"
+	},
+	"COPY_DECODED": {
+		"message": "Copy (decoded)"
+	},
+	"DELETE": {
+		"message": "Delete"
+	},
+	"EDIT_DECODED_VALUES": {
+		"message": "Edit decoded values"
+	},
+	"EDIT_ENCODED_VALUES": {
+		"message": "Edit encoded values"
+	},
+	"ENTER_EDIT_MODE": {
+		"message": "Enter edit mode"
+	},
+	"EXIT_EDIT_MODE": {
+		"message": "Exit edit mode"
+	},
+	"OPEN": {
+		"message": "Open"
+	}
+}

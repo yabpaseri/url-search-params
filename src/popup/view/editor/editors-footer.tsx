@@ -9,6 +9,7 @@ import Tooltip, { tooltipClasses, TooltipProps } from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import { KeyboardEventHandler, memo, useCallback, useMemo, useState } from 'react';
 import { usePopupDispatch, usePopupState } from '../../context/popup-context';
+import i18n from '../../i18n';
 import { MemoizedInput } from '../components';
 import { ArrowTooltip } from '../components/arrow-tooltip';
 
@@ -37,7 +38,7 @@ export const EditorsFooter = memo(() => {
 		<S.AppBar position="fixed">
 			<S.Toolbar variant="dense">
 				<S.Typography variant="subtitle2">key</S.Typography>
-				<S.Tooltip title="already exist" placement="top" open={duplication}>
+				<S.Tooltip title={i18n('ALREADY_EXIST')} placement="top" open={duplication}>
 					<S.MemoizedInput
 						fullWidth
 						size="small"
@@ -47,7 +48,7 @@ export const EditorsFooter = memo(() => {
 						onKeyDown={handleInputKeydown}
 					/>
 				</S.Tooltip>
-				<ArrowTooltip title="Add new key">
+				<ArrowTooltip title={i18n('ADD_NEW_KEY')}>
 					<S.IconButtonWrapper aria-disabled={!input || duplication} component="span">
 						<S.IconButton onClick={handleAddClick} size="small" color="inherit" disabled={!input || duplication}>
 							<AddIcon />

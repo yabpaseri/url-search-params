@@ -1,5 +1,6 @@
 import Tooltip from '@mui/material/Tooltip';
 import { ComponentProps, memo, useCallback, useEffect, useRef, useState } from 'react';
+import i18n from '../../i18n';
 
 type TProps = Pick<ComponentProps<typeof Tooltip>, 'children'> & {
 	defaultTitle?: string;
@@ -10,7 +11,7 @@ export const CopyToClipboard = memo<TProps>(({ defaultTitle, text, children }) =
 	const [title, setTitle] = useState(defaultTitle);
 	const handleClick = useCallback(() => {
 		window.navigator.clipboard.writeText(text);
-		setTitle('Copied!');
+		setTitle(i18n('COPIED'));
 	}, [text]);
 
 	// TransitionProps.onExited was used to return the value to default.

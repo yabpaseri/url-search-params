@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import { memo, useCallback, useMemo } from 'react';
 import { usePopupDispatch, usePopupState } from '../context/popup-context';
 import { convert2Search, getOrCreateNormalWindow } from '../functions';
+import i18n from '../i18n';
 import { CopyToClipboard } from './components';
 import { ArrowTooltip } from './components/arrow-tooltip';
 
@@ -40,7 +41,7 @@ export const ViewsHeader = memo(() => {
 					URL Search Params
 				</Typography>
 				<S.IconsStack direction="row" justifyContent="flex-end">
-					<ArrowTooltip title={mode === 'reader' ? 'Enter edit mode' : 'Exit edit mode'}>
+					<ArrowTooltip title={mode === 'reader' ? i18n('ENTER_EDIT_MODE') : i18n('EXIT_EDIT_MODE')}>
 						<IconButton onClick={handleModeClick} color="inherit" size="small">
 							{mode === 'reader' && <EditIcon />}
 							{mode === 'editor' && <EditOffIcon />}
@@ -62,12 +63,12 @@ export const ViewsHeader = memo(() => {
 				</Typography>
 				<S.Divider flexItem variant="middle" orientation="vertical" />
 				<S.IconsStack direction="row">
-					<CopyToClipboard defaultTitle="Copy" text={url || ''}>
+					<CopyToClipboard defaultTitle={i18n('COPY')} text={url || ''}>
 						<IconButton color="inherit" size="small">
 							<AssignmentIcon />
 						</IconButton>
 					</CopyToClipboard>
-					<ArrowTooltip title="Open">
+					<ArrowTooltip title={i18n('OPEN')}>
 						<IconButton onClick={handleLaunchClick} color="inherit" size="small">
 							<LaunchIcon />
 						</IconButton>

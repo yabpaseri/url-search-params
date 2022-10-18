@@ -30,5 +30,5 @@ This extension is used to retrieve and edit URL query strings, like JavaScript's
 
 ## Links
 
--   [chrome web store]()
+-   ~~Chrome Web Store~~ // pending application
 -   [GitHub](https://github.com/yabpaseri/url-search-params)

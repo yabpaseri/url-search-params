@@ -28,5 +28,5 @@ JavaScript の URLSearchParams のように、クエリー文字列を取得・�
 
 ## Links
 
--   [chrome web store]()
+-   ~~Chrome Web Store~~ // 申請中
 -   [GitHub](https://github.com/yabpaseri/url-search-params)

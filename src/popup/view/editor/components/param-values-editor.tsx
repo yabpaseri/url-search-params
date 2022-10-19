@@ -29,7 +29,7 @@ export const ParamValuesEditor = memo<TProps>(({ param: { name, values } }) => {
 		<Stack spacing="5px">
 			<S.Stack spacing="5px" direction="row">
 				<S.Typography variant="h6" flexGrow={1} onClick={handleKeyClick}>
-					{name}
+					{new URLSearchParams(`_=${name}`).get('_') || <pre> </pre>}
 				</S.Typography>
 				<ArrowTooltip title={i18n('ADD_NEW_VALUE')}>
 					<S.IconButton onClick={handleAddClick} size="small" color="inherit">

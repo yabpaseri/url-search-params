@@ -13,7 +13,9 @@ type TProps = {
 export const ParamValuesReader = memo<TProps>(({ param: { name, values } }) => {
 	return (
 		<Stack spacing="5px">
-			<S.Typography variant="h6">{name}</S.Typography>
+			<S.Typography variant="h6" className="noempty">
+				{new URLSearchParams(`_=${name}`).get('_') || <pre> </pre>}
+			</S.Typography>
 			{values.map((v) => (
 				<ParamValueReader key={v.id} value={v.value} />
 			))}

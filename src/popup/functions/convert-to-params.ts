@@ -9,11 +9,9 @@ export const convert2Params = (search: string): SearchParam[] => {
 
 	const map: Map<string, string[]> = new Map();
 	for (const v of search.split('&')) {
-		// ok: foo=bar, foo=
-		// ng: =bar, foobar
-		if (!v.includes('=') || v.startsWith('=')) continue;
-		const [key, ...others] = v.split('=');
-		const value = others.join('=');
+		if (v === '') continue;
+		const eqIndex = v.indexOf('=');
+		const [key, value] = eqIndex < 0 ? [v, ''] : [v.slice(0, eqIndex), v.slice(eqIndex + 1)];
 		const values = map.get(key) || [];
 		values.push(value);
 		map.set(key, values);

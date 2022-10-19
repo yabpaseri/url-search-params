@@ -46,7 +46,11 @@ const popupReducer = (state: PopupState, action: Action): PopupState => {
 		}
 		case 'SET_PARAMS': {
 			const params = action.params.sort((a, b) => simpleCompare(a.name, b.name));
-			const params_names = params.map((v) => v.name);
+			const params_names = params.map((v) => new URLSearchParams(`_=${v.name}`).get('_') || '');
+			if (import.meta.env.DEV) {
+				console.log(JSON.stringify(params, void 0, '\t'));
+				console.log(JSON.stringify(params_names));
+			}
 			return { ...state, params, params_names };
 		}
 		case 'SET_PARAM': {
@@ -57,10 +61,14 @@ const popupReducer = (state: PopupState, action: Action): PopupState => {
 				params.push(action.param);
 				params.sort((a, b) => simpleCompare(a.name, b.name));
 				next.params = params;
-				next.params_names = params.map((v) => v.name);
+				next.params_names = params.map((v) => new URLSearchParams(`_=${v.name}`).get('_') || '');
 			} else {
 				params.splice(index, 0, action.param);
 				next.params = params;
+			}
+			if (import.meta.env.DEV) {
+				console.log(JSON.stringify(next.params, void 0, '\t'));
+				console.log(JSON.stringify(next.params_names));
 			}
 			return next;
 		}
@@ -83,7 +91,11 @@ const popupReducer = (state: PopupState, action: Action): PopupState => {
 			if (state.params.length === params.length) {
 				return state;
 			}
-			const params_names = params.map((v) => v.name);
+			const params_names = params.map((v) => new URLSearchParams(`_=${v.name}`).get('_') || '');
+			if (import.meta.env.DEV) {
+				console.log(JSON.stringify(params, void 0, '\t'));
+				console.log(JSON.stringify(params_names));
+			}
 			return { ...state, params, params_names };
 		}
 		case 'REMOVE_PARAM_VALUE': {

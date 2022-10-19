@@ -20,7 +20,8 @@ export const EditorsFooter = memo(() => {
 	const [input, setInput] = useState('');
 	const handleInputChange = useCallback((value: string) => setInput(value), []);
 	const handleAddClick = useCallback(() => {
-		dispatch({ type: 'ADD_PARAM_VALUE', name: input, value: '' });
+		const name = new URLSearchParams(`_=${input}`).toString().slice(2);
+		dispatch({ type: 'ADD_PARAM_VALUE', name, value: '' });
 		setInput('');
 	}, [dispatch, input]);
 
@@ -38,19 +39,19 @@ export const EditorsFooter = memo(() => {
 		<S.AppBar position="fixed">
 			<S.Toolbar variant="dense">
 				<S.Typography variant="subtitle2">key</S.Typography>
-				<S.Tooltip title={i18n('ALREADY_EXIST')} placement="top" open={duplication}>
+				<S.Tooltip title={i18n('ALREADY_EXIST')} placement="top" open={!!input && duplication}>
 					<S.MemoizedInput
 						fullWidth
 						size="small"
-						error={duplication}
+						error={!!input && duplication}
 						value={input}
 						onChange={handleInputChange}
 						onKeyDown={handleInputKeydown}
 					/>
 				</S.Tooltip>
 				<ArrowTooltip title={i18n('ADD_NEW_KEY')}>
-					<S.IconButtonWrapper aria-disabled={!input || duplication} component="span">
-						<S.IconButton onClick={handleAddClick} size="small" color="inherit" disabled={!input || duplication}>
+					<S.IconButtonWrapper aria-disabled={!input && duplication} component="span">
+						<S.IconButton onClick={handleAddClick} size="small" color="inherit" disabled={!input && duplication}>
 							<AddIcon />
 						</S.IconButton>
 					</S.IconButtonWrapper>

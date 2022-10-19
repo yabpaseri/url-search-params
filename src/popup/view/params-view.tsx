@@ -19,18 +19,12 @@ const ParamsView = () => {
 		if (target == null) throw new Error('Parameter "target" does not exist in location.search');
 		if (windowId == null) throw new Error('Parameter "windowId" does not exist in location.search');
 
+		console.log(`location.search.target="${target}"`);
+		console.log(`location.search.windowId=${windowId}`);
+
 		const parent_window = parseInt(windowId);
-		console.log(`parent_window = ${parent_window}`);
 		const url = catchTo(() => new URL(target), void 0);
-		console.log(`url = ${url}`);
 		const params = convert2Params(url?.search || '');
-		console.log(`params::begin`);
-		for (const p of params) {
-			for (const v of p.values) {
-				console.log(`${p.name}=${v.value}`);
-			}
-		}
-		console.log(`params::end`);
 
 		dispatch({ type: 'SET_PARENT_WINDOW', parent_window });
 		dispatch({ type: 'SET_URL', url });

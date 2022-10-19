@@ -5,11 +5,11 @@ import { description, version as version_name } from './package.json';
 import archive from './plugins/vite-plugin-archive';
 
 const version = version_name.replace(/[^\d.-]+/g, '').replace('-', '.');
-const manifest = defineManifest({
+const manifest = defineManifest(({ mode }) => ({
 	manifest_version: 3,
 	name: 'URL Search Params',
 	version,
-	version_name,
+	version_name: version_name + (mode !== 'production' ? ` (${mode})` : ''),
 	description,
 	default_locale: 'en',
 	icons: {
@@ -23,7 +23,7 @@ const manifest = defineManifest({
 		service_worker: 'src/background/service-worker.ts',
 		type: 'module',
 	},
-});
+}));
 
 // https://vitejs.dev/config/
 export default defineConfig({

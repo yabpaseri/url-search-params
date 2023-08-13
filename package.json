@@ -3,7 +3,7 @@
   "description": "Extension for retrieving and editing URL query strings, like JavaScript's URLSearchParams.",
   "private": true,
   "license": "GPL-3.0",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build --mode staging",

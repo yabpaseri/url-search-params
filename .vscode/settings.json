@@ -10,5 +10,8 @@
 	"[bat]": {
 		"files.eol": "\r\n",
 		"files.encoding": "shiftjis"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	}
 }

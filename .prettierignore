@@ -1,0 +1,8 @@
+node_modules
+.output
+stats.html
+stats-*.json
+.wxt
+
+package.json
+pnpm-lock.yaml

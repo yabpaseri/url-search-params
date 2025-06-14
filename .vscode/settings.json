@@ -1,0 +1,14 @@
+{
+	"files.eol": "\n",
+	"files.encoding": "utf8",
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.codeActionsOnSave": {
+		"source.sortImports": "explicit",
+		"source.fixAll.ts": "explicit"
+	},
+	"[bat]": {
+		"files.eol": "\r\n",
+		"files.encoding": "shiftjis"
+	}
+}

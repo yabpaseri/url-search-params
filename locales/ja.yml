@@ -1,0 +1,12 @@
+ADD_NEW_KEY: キーの追加
+ADD_NEW_VALUE: 値の追加
+ALREADY_EXIST: 既に存在しています
+COPIED: コピーしました
+COPY_DECODED: コピー (デコードされた値)
+COPY: コピー
+DELETE: 削除
+EDIT_DECODED_VALUES: デコードされた値を編集
+EDIT_ENCODED_VALUES: エンコードされた値を編集
+ENTER_EDIT_MODE: 編集モードを開始
+EXIT_EDIT_MODE: 編集モードを終了
+OPEN: 開く

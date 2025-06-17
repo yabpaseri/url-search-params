@@ -28,5 +28,6 @@ This extension is used to retrieve and edit URL query strings, like JavaScript's
 
 ## Links
 
-- [Chrome Web Store](https://chrome.google.com/webstore/detail/url-search-params/cnnhkbfgdmbekkhbpmbmbbbpchjnilem?hl=en)
+- [Chrome Web Store](https://chrome.google.com/webstore/detail/url-search-params/cnnhkbfgdmbekkhbpmbmbbbpchjnilem)
+- [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/urlsearchparams/)
 - [GitHub](https://github.com/yabpaseri/url-search-params)
